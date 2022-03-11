@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./Calculator.scss";
 
 export const Calculator = () => {
-  const [price, setPrice] = useState(0);
+  const [price1, setPrice1] = useState(0);
+  const [price2, setPrice2] = useState(0);
 
   return (
     <section className="main-calculator">
@@ -10,15 +11,33 @@ export const Calculator = () => {
       <p>Rachunek jest prosty.</p>
       <div className="container">
         <h1>Ile pojemników na szkło zapełniasz miesięcznie?</h1>
-        <input type="text" className="text" placeholder="20" />
+        <input
+          type="number"
+          placeholder="20"
+          onChange={(event) =>
+            isNaN(parseInt(event.target.value))
+              ? setPrice1(0)
+              : setPrice1(parseInt(event.target.value))
+          }
+        />
       </div>
       <div className="container">
         <h1>Ile płacisz za wywóz jednego pojemnika na szkło?</h1>
-        <input type="text" className="text" placeholder="20" />
+        <input
+          type="number"
+          placeholder="20"
+          onChange={(event) =>
+            isNaN(parseInt(event.target.value))
+              ? setPrice2(0)
+              : setPrice2(parseInt(event.target.value))
+          }
+        />
       </div>
       <div className="result-container">
         <p>Dzięki kruszarce zaoszczędzisz</p>
-        <span className="result">{price} zł</span>
+        <span className="result">
+          {Math.round(12 * (price1 * price2 - price1 * (price2 / 5)))} zł
+        </span>
         <p>rocznie.</p>
       </div>
     </section>
