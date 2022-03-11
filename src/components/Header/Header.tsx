@@ -12,20 +12,30 @@ const Languages = [
 
 export const Header = () => {
   const [isOpen, setOpen] = useState(false);
-  console.log(isOpen);
 
   return (
-    <header className="header">
-      <div className="image">
-        <img src={Logo} alt="logo" />
-      </div>
-      <Select
-        options={Languages}
-        defaultValue={Languages[1]}
-        className="select-container"
-        classNamePrefix="select"
-      />
-      <Hamburger toggled={isOpen} toggle={setOpen} size={40} />
-    </header>
+    <>
+      <header className="header">
+        <div className="image">
+          <img src={Logo} alt="logo" />
+        </div>
+        <Select
+          options={Languages}
+          defaultValue={Languages[1]}
+          className="select-container"
+          classNamePrefix="select"
+        />
+        <Hamburger toggled={isOpen} toggle={setOpen} size={40} />
+      </header>
+      <nav className={isOpen ? "nav-mobile slide-in" : "nav-mobile slide-out"}>
+        <div className="nav-flex">
+          <a>Policz zyski</a>
+          <a>O produkcie</a>
+          <a>Kontakt</a>
+          <a>FAQ</a>
+          <div className="nav-btn">kup</div>
+        </div>
+      </nav>
+    </>
   );
 };

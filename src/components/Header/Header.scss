@@ -32,3 +32,60 @@
     }
   }
 }
+
+.nav-mobile {
+  display: block;
+  padding-top: 72px;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 100%;
+  background-color: white;
+  z-index: 1;
+
+  .nav-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      margin-bottom: 72px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    .nav-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 152px;
+      height: 50px;
+      background: #ffb001;
+      border: 2px solid #ffb001;
+      box-sizing: border-box;
+      box-shadow: 0px 20px 59px -10px rgba(0, 0, 0, 0.15);
+      border-radius: 28.5px;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.slide-out {
+  transform: translateX(+100%);
+  transition: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  transition: all;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
