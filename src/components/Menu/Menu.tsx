@@ -1,6 +1,7 @@
 import dev from "../../images/dev.png";
 import "./Menu.scss";
 import { ShopButton } from "../ShopButton/ShopButton";
+import { Calculator } from "../Calculator/Calculator";
 
 export const Menu = () => {
   return (
@@ -19,6 +20,7 @@ export const Menu = () => {
           rachunki za ich wywóz.
         </p>
       </section>
+      <Calculator />
     </>
   );
 };
