@@ -1,0 +1,15 @@
+.button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffb001;
+  position: relative;
+  box-shadow: 0px 20px 59px -10px rgba(0, 0, 0, 0.15);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
