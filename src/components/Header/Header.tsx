@@ -11,7 +11,7 @@ const Languages = [
 ];
 
 export const Header = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [nav, setNav] = useState("");
 
   return (
     <>
@@ -25,9 +25,18 @@ export const Header = () => {
           className="select-container"
           classNamePrefix="select"
         />
-        <Hamburger toggled={isOpen} toggle={setOpen} size={40} />
+        <Hamburger
+          size={40}
+          onToggle={(toggled) => {
+            if (toggled) {
+              setNav("open");
+            } else {
+              setNav("");
+            }
+          }}
+        />
       </header>
-      <nav className={isOpen ? "nav-mobile slide-in" : "nav-mobile slide-out"}>
+      <nav className={`nav-mobile-closed ${nav}`}>
         <div className="nav-flex">
           <a>Policz zyski</a>
           <a>O produkcie</a>
