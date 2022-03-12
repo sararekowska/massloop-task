@@ -1,8 +1,10 @@
 import { Squash as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../images/logo.png";
 import Select from "react-select";
 import "./Header.scss";
+import i18n from "../../translations/i18n";
+import { useTranslation } from "react-i18next";
 
 const Languages = [
   { label: "EN", value: "en" },
@@ -13,6 +15,13 @@ const Languages = [
 export const Header = () => {
   const [nav, setNav] = useState("");
 
+  const { t } = useTranslation();
+
+  const handler = (event: any) => {
+    const value = event.value;
+    i18n.changeLanguage(value);
+  };
+
   return (
     <>
       <header className="header">
@@ -20,9 +29,9 @@ export const Header = () => {
           <img src={Logo} alt="logo" />
         </div>
         <div className="nav-desktop">
-          <a>Policz zyski</a>
-          <a>O produkcie</a>
-          <a>Kontakt</a>
+          <a>{t("zyski")}</a>
+          <a>{t("produkt")}</a>
+          <a>{t("kontakt")}</a>
           <a>FAQ</a>
         </div>
         <div className="header-right">
@@ -31,6 +40,7 @@ export const Header = () => {
             defaultValue={Languages[1]}
             className="select-container"
             classNamePrefix="select"
+            onChange={handler}
           />
           <div className="hamburger">
             <Hamburger
@@ -45,17 +55,17 @@ export const Header = () => {
             />
           </div>
           <div className="nav-desktop-btn">
-            <h1>kup</h1>
+            <h1>{t("kup")}</h1>
           </div>
         </div>
       </header>
       <nav className={`nav-mobile-closed ${nav}`}>
         <div className="nav-flex">
-          <a>Policz zyski</a>
-          <a>O produkcie</a>
-          <a>Kontakt</a>
+          <a>{t("zyski")}</a>
+          <a>{t("produkt")}</a>
+          <a>{t("kontakt")}</a>
           <a>FAQ</a>
-          <div className="nav-btn">kup</div>
+          <div className="nav-btn">{t("kup")}</div>
         </div>
       </nav>
     </>
