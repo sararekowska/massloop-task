@@ -19,22 +19,35 @@ export const Header = () => {
         <div className="image">
           <img src={Logo} alt="logo" />
         </div>
-        <Select
-          options={Languages}
-          defaultValue={Languages[1]}
-          className="select-container"
-          classNamePrefix="select"
-        />
-        <Hamburger
-          size={40}
-          onToggle={(toggled) => {
-            if (toggled) {
-              setNav("open");
-            } else {
-              setNav("");
-            }
-          }}
-        />
+        <div className="nav-desktop">
+          <a>Policz zyski</a>
+          <a>O produkcie</a>
+          <a>Kontakt</a>
+          <a>FAQ</a>
+        </div>
+        <div className="header-right">
+          <Select
+            options={Languages}
+            defaultValue={Languages[1]}
+            className="select-container"
+            classNamePrefix="select"
+          />
+          <div className="hamburger">
+            <Hamburger
+              size={40}
+              onToggle={(toggled) => {
+                if (toggled) {
+                  setNav("open");
+                } else {
+                  setNav("");
+                }
+              }}
+            />
+          </div>
+          <div className="nav-desktop-btn">
+            <h1>kup</h1>
+          </div>
+        </div>
       </header>
       <nav className={`nav-mobile-closed ${nav}`}>
         <div className="nav-flex">
