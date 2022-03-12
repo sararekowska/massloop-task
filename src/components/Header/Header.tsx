@@ -14,12 +14,12 @@ const Languages = [
 
 export const Header = () => {
   const [nav, setNav] = useState("");
+  const [lang, setLang] = useState("pl");
 
   const { t } = useTranslation();
 
   const handler = (event: any) => {
-    const value = event.value;
-    i18n.changeLanguage(value);
+    setLang(event.value);
   };
 
   return (
@@ -53,6 +53,9 @@ export const Header = () => {
                 }
               }}
             />
+            {useEffect(() => {
+              i18n.changeLanguage(lang);
+            })}
           </div>
           <div className="nav-desktop-btn">
             <h1>{t("kup")}</h1>
