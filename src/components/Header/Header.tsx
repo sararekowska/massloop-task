@@ -18,10 +18,6 @@ export const Header = () => {
 
   const { t } = useTranslation();
 
-  const handler = (event: any) => {
-    setLang(event.value);
-  };
-
   return (
     <>
       <header className="header">
@@ -40,7 +36,7 @@ export const Header = () => {
             defaultValue={Languages[1]}
             className="select-container"
             classNamePrefix="select"
-            onChange={handler}
+            onChange={(event) => event && setLang(event.value)}
           />
           <div className="hamburger">
             <Hamburger

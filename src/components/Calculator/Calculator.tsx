@@ -40,7 +40,7 @@ export const Calculator = () => {
       </div>
       <div className="result-container">
         <p>{t("oszczedzisz")}</p>
-        <span className={price1 && price2 ? "result result-color-change" : "result"}>
+        <span className={price1 && price2 ? "result result-color-change" : "result"} role="figure">
           {Math.round(12 * (price1 * price2 - price1 * (price2 / 5)))} zł
         </span>
         <p>{t("rocznie")}</p>
