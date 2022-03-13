@@ -5,13 +5,16 @@ import Select from "react-select";
 import "./Header.scss";
 import i18n from "../../translations/i18n";
 import { useTranslation } from "react-i18next";
-import { LazyLoadComponent, LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadComponent,
+  LazyLoadImage,
+} from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const Languages = [
   { label: "EN", value: "en" },
   { label: "PL", value: "pl" },
-  { label: "DE", value: "de" }
+  { label: "DE", value: "de" },
 ];
 
 export const Header = () => {
@@ -27,10 +30,10 @@ export const Header = () => {
           <LazyLoadImage alt="logo" effect="opacity" src={Logo} />
         </div>
         <div className="nav-desktop">
-          <a>{t("zyski")}</a>
-          <a>{t("produkt")}</a>
-          <a>{t("kontakt")}</a>
-          <a>FAQ</a>
+          <a href="/calculator">{t("zyski")}</a>
+          <a href="/product">{t("produkt")}</a>
+          <a href="/">{t("kontakt")}</a>
+          <a href="/">FAQ</a>
         </div>
         <div className="header-right">
           <Select
@@ -64,10 +67,10 @@ export const Header = () => {
       </header>
       <nav className={`nav-mobile-closed ${nav}`}>
         <div className="nav-flex">
-          <a>{t("zyski")}</a>
-          <a>{t("produkt")}</a>
-          <a>{t("kontakt")}</a>
-          <a>FAQ</a>
+          <a href="/calculator">{t("zyski")}</a>
+          <a href="/product">{t("produkt")}</a>
+          <a href="/">{t("kontakt")}</a>
+          <a href="/">FAQ</a>
           <div className="nav-btn">{t("kup")}</div>
         </div>
       </nav>
