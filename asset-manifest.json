@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/massloop/static/css/main.daa2a86a.css",
+    "main.js": "/massloop/static/js/main.8d0fb118.js",
+    "static/media/dev.png": "/massloop/static/media/dev.82f9cc4a5fd85b36abc1.png",
+    "index.html": "/massloop/index.html",
+    "main.daa2a86a.css.map": "/massloop/static/css/main.daa2a86a.css.map",
+    "main.8d0fb118.js.map": "/massloop/static/js/main.8d0fb118.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daa2a86a.css",
+    "static/js/main.8d0fb118.js"
+  ]
+}
