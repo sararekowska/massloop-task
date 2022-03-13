@@ -5,6 +5,8 @@ import Select from "react-select";
 import "./Header.scss";
 import i18n from "../../translations/i18n";
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent, LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const Languages = [
   { label: "EN", value: "en" },
@@ -22,7 +24,7 @@ export const Header = () => {
     <>
       <header className="header">
         <div className="image">
-          <img src={Logo} alt="logo" />
+          <LazyLoadImage alt="logo" effect="opacity" src={Logo} />
         </div>
         <div className="nav-desktop">
           <a>{t("zyski")}</a>
@@ -53,9 +55,11 @@ export const Header = () => {
               i18n.changeLanguage(lang);
             })}
           </div>
-          <div className="nav-desktop-btn">
-            <h1>{t("kup")}</h1>
-          </div>
+          <LazyLoadComponent>
+            <div className="nav-desktop-btn">
+              <h1>{t("kup")}</h1>
+            </div>
+          </LazyLoadComponent>
         </div>
       </header>
       <nav className={`nav-mobile-closed ${nav}`}>

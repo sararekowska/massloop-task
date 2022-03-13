@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import "./Footer.scss";
 
 export const Footer = () => {
@@ -6,9 +7,11 @@ export const Footer = () => {
   return (
     <section className="footer">
       <p>{t("footerp")}</p>
-      <div className="buy-btn">
-        <span className="buy-btn-strong">{t("kup")}&nbsp;</span>8499 zł
-      </div>
+      <LazyLoadComponent>
+        <div className="buy-btn">
+          <span className="buy-btn-strong">{t("kup")}&nbsp;</span>8499 zł
+        </div>
+      </LazyLoadComponent>
       <h1>
         {t("footerbold1")} <br />
         {t("footerbold2")}
