@@ -109,6 +109,14 @@
 
 @media screen and (min-width: 1025px) {
   .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+    padding: 1rem 5rem 1rem 5rem;
+    box-shadow: 0px 4px 24px -5px rgba(0, 0, 0, 0.15);
+
     .nav-desktop {
       display: flex;
       flex-direction: row;
