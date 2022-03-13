@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/massloop-task/static/css/main.daa2a86a.css",
-    "main.js": "/massloop-task/static/js/main.46f89c63.js",
-    "static/media/dev.png": "/massloop-task/static/media/dev.82f9cc4a5fd85b36abc1.png",
-    "index.html": "/massloop-task/index.html",
-    "main.daa2a86a.css.map": "/massloop-task/static/css/main.daa2a86a.css.map",
-    "main.46f89c63.js.map": "/massloop-task/static/js/main.46f89c63.js.map"
+    "main.css": "/static/css/main.daa2a86a.css",
+    "main.js": "/static/js/main.b9d00530.js",
+    "static/media/dev.png": "/static/media/dev.82f9cc4a5fd85b36abc1.png",
+    "index.html": "/index.html",
+    "main.daa2a86a.css.map": "/static/css/main.daa2a86a.css.map",
+    "main.b9d00530.js.map": "/static/js/main.b9d00530.js.map"
   },
   "entrypoints": [
     "static/css/main.daa2a86a.css",
-    "static/js/main.46f89c63.js"
+    "static/js/main.b9d00530.js"
   ]
 }
